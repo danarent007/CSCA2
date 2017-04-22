@@ -19,6 +19,17 @@ public class SearchIt {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
                 //Populate lists
+        
+        if(args.length < 1){
+            System.out.println("Please add arguments: number of reps.");
+        
+            System.exit(0);
+        }
+        
+        for (int i = 0; i < Integer.parseInt(args[0]); i++)
+        {
+            
+        
         BufferedReader td = new BufferedReader(new FileReader ("testdata"));
         BufferedReader qd = new BufferedReader(new FileReader ("querydata"));
         
@@ -47,7 +58,7 @@ public class SearchIt {
         
        
             
-        
+    }
     }
     
     
