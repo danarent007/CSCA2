@@ -3,6 +3,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
+import java.time.Instant;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,6 +20,7 @@ public class InsertAVL
 {
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
+        Instant start = Instant.now();
                 AVLTree<Entry> tree = new AVLTree<Entry>();
                 
         if(args.length < 1){
@@ -45,6 +48,10 @@ public class InsertAVL
         }
         
     }
+        Instant end = Instant.now();
+        Duration timeElapsed = Duration.between(start, end);
+        System.out.println("Time taken over reps: "+ timeElapsed.toMillis()/Integer.parseInt(args[0]) +" milliseconds");
+        System.out.println("Total time: " + timeElapsed.toMillis() + " milliseconds");
     }
     
 }
