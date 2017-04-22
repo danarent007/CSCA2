@@ -8,6 +8,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
+import java.time.Instant;
 
 
 /**
@@ -18,7 +20,8 @@ public class SearchIt {
     static Tree<Entry> tree = new Tree<Entry>();
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
-                //Populate lists
+        Instant start = Instant.now();
+        //Populate lists
         
         if(args.length < 1){
             System.out.println("Please add arguments: number of reps.");
@@ -59,6 +62,10 @@ public class SearchIt {
        
             
     }
+        Instant end = Instant.now();
+        Duration timeElapsed = Duration.between(start, end);
+        System.out.println("Time taken over reps: "+ timeElapsed.toMillis()/Integer.parseInt(args[0]) +" milliseconds");
+        System.out.println("Total time: " + timeElapsed.toMillis() + " milliseconds");
     }
     
     
