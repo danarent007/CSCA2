@@ -3,6 +3,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Duration;
+import java.time.Instant;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,7 +21,7 @@ public class SearchAVL
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
                 AVLTree<Entry> tree = new AVLTree<Entry>();
-                
+        Instant start = Instant.now();        
         if(args.length < 1){
             System.out.println("Please add arguments: number of reps.");
         
@@ -54,16 +56,21 @@ public class SearchAVL
             
             BinaryTreeNode<Entry> tmp = tree.find(tempEnt);
             
-            if (tmp == null && args[0].equals("1")) 
+            if (tmp == null) 
             {
                 System.out.println("Not found");  
             }
-            else if(args[0].equals("1")){
+            else {
                 System.out.println(tmp.data.getName() + " || " + tmp.data.getNumber() + " || " + tmp.data.getAddress());
             }
             temp = qd.readLine();  
         }
     }
+        
+        Instant end = Instant.now();
+        Duration timeElapsed = Duration.between(start, end);
+        System.out.println("Time taken over reps: "+ timeElapsed.toMillis()/Integer.parseInt(args[0]) +" milliseconds");
+        System.out.println("Total time: " + timeElapsed.toMillis() + " milliseconds");
     }
     
 }
