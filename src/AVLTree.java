@@ -62,7 +62,7 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
 
    public void insert ( dataType d )
    {
-      root = insert (d, root);
+      root = (BinaryTreeNode)insert (d, root);
    }
    public BinaryTreeNode<dataType> insert ( dataType d, BinaryTreeNode<dataType> node )
    {
