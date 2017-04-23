@@ -21,6 +21,7 @@ public class InsertIt {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Instant start = Instant.now();
+        int ins = 0;
         //Populate lists
         
         if(args.length < 1){
@@ -40,6 +41,7 @@ public class InsertIt {
         String temp = td.readLine();
         while (temp != null){
             tree.addLeaf((Entry)new Entry(temp));
+            ins++;
             temp = td.readLine();  
         }
         
@@ -49,6 +51,7 @@ public class InsertIt {
         Instant end = Instant.now();
         Duration timeElapsed = Duration.between(start, end);
         System.out.println("Time taken over reps: "+ timeElapsed.toMillis()/Integer.parseInt(args[0]) +" milliseconds");
+        System.out.println("Time per operaton: "+ (timeElapsed.toNanos()/Integer.parseInt(args[0]))/ins +" nanoseconds");
         System.out.println("Total time: " + timeElapsed.toMillis() + " milliseconds");
     }
     
