@@ -49,11 +49,11 @@ public class SearchIt {
         
         while (temp != null){
             result = tree.find(temp);
-            if (result == null && args[0].equals("1")) 
+            if (result == null) 
             {
                 System.out.println("Not found");  
             }
-            else if (args[0].equals("1")){
+            else{
                 System.out.println("" + result.getName() + " || " + result.getNumber() + " || " + result.getAddress());
             }
             temp = qd.readLine();  
