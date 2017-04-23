@@ -2,7 +2,7 @@ JAVAC=/usr/bin/javac
 .SUFFIXES: .java .class
 
 .java.class:
-	javac -g -d bin/ -cp bin/ $*.java
+	javac -target 1.6 -source 1.6 -g -d bin/ -cp bin/ $*.java
 
 CLASSES = \
 	src/Entry.java \
