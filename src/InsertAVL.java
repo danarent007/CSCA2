@@ -25,7 +25,8 @@ public class InsertAVL
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
         Instant start = Instant.now();
-                AVLTree<Entry> tree = new AVLTree<Entry>();
+        AVLTree<Entry> tree = new AVLTree<Entry>();
+        int ins = 0;
                 
         if(args.length < 1){
             System.out.println("Please add arguments: number of reps.");
@@ -43,11 +44,15 @@ public class InsertAVL
         BufferedReader qd = new BufferedReader(new FileReader ("querydata"));
         
         //Populate testData list with testdata file.
+        
+       
         String temp = td.readLine();
+        
         while (temp != null){
             //Add data
              
             tree.insert(new Entry(temp));
+            ins++;
             temp = td.readLine(); 
         }
         
@@ -55,6 +60,7 @@ public class InsertAVL
         Instant end = Instant.now();
         Duration timeElapsed = Duration.between(start, end);
         System.out.println("Time taken over reps: "+ timeElapsed.toMillis()/Integer.parseInt(args[0]) +" milliseconds");
+        System.out.println("Time per operaton: "+ (timeElapsed.toNanos()/Integer.parseInt(args[0]))/ins +" nanoseconds");
         System.out.println("Total time: " + timeElapsed.toMillis() + " milliseconds");
     }
     
