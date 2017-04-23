@@ -1,3 +1,7 @@
+//Daniel Vorster
+//VRSDAN004
+//23 April 2017
+//Generate testing files
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -9,10 +13,7 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.ArrayList;
 
-//Daniel Vorster
-//VRSDAN004
-//09 April 2017
-//Generate testing files
+
 
 /**
  * The QueryFileGenerator is used to generate a query file by randomly selecting n entries from the data file.

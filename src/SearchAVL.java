@@ -1,3 +1,7 @@
+//Daniel Vorster
+//VRSDAN004
+//23 April 2017
+//SearchAVL Class
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
