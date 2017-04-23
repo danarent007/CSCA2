@@ -7,7 +7,7 @@
  * Entry object to hold name, address and telephone number of an entry.
  * @author DanielVorster
  */
-public class Entry implements Comparable<Entry>{
+public class Entry implements Comparable{
     private String name;
     private String address;
     private String number;
@@ -76,10 +76,9 @@ public class Entry implements Comparable<Entry>{
     
    
 
+
     @Override
-    public int compareTo(Entry o)
-    {
-        //System.out.println("" + this.name.compareTo(o.toString()));
+    public int compareTo(Object o) {
         return(this.name.compareTo(o.toString()));
     }
     
