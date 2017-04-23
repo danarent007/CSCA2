@@ -24,8 +24,14 @@ public class Driver
     public static void main(String[] args) throws IOException
     {
         Scanner s = new Scanner(System.in); 
-        System.out.println("Enter option followed by space, then param:\n(1): SearchAVL\n(2): SearchIt\n(3): InsertAVL\n(4): InsertIt");
+        System.out.println("Enter option followed by space, then param:\n(1): SearchAVL\n(2): SearchIt\n(3): InsertAVL\n(4): InsertIt\n(5): QueryFileGenerator. Note: Param = no. file entries.");
         String[] ans = s.nextLine().split(" ");
+        
+        if(ans.length < 2){
+            System.out.println("Please enter a param.");
+            Driver.main(null);
+            System.exit(0);
+        }
         
         switch(ans[0]){
             case "1": 
@@ -39,6 +45,10 @@ public class Driver
                 break;
             case "4":
                 InsertIt.main(new String[]{ans[1]});
+                break;
+            case "5":
+                QueryFileGenerator.main(new String[]{ans[1]});
+                break;
                        
             
             
