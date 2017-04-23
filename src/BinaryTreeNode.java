@@ -1,4 +1,4 @@
-// Hussein's Binary Tree
+// Hussein's Binary Tree - Adapted by Daniel Vorsyer
 // 26 March 2017
 // Hussein Suleman
 
