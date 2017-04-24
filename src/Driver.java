@@ -9,15 +9,15 @@ import java.util.Scanner;
 
 
 /**
- * Driver class provides a simple interface for running the 3 programs.
+ * Driver class provides a simple interface for running the programs.
  * @author DanielVorster
- * Driver class provides a simple interface for running the 3 programs.
+ * Driver class provides a simple interface for running the programs.
  */
 public class Driver
 {
     
     /**
-     * Driver class provides a simple interface for running the 3 programs.
+     * Driver class provides a simple interface for running the 3 programs. Programs are run with a parameter, dictating the number of repetitions.
      * @param args
      * @throws IOException 
      */

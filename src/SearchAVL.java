@@ -17,11 +17,18 @@ import java.time.Instant;
  */
 
 /**
- *
- * @author M315T3R
+ * SearchAVL is the main application in this package. It searches for all matches in querydata and tesdata, and returns the result.
+ * @author DanielVorster
  */
 public class SearchAVL
 {
+    
+    /**
+     * 
+     * @param args The argument here dictates the number of repetitions.
+     * @throws FileNotFoundException
+     * @throws IOException 
+     */
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
                 AVLTree<Entry> tree = new AVLTree<Entry>();

@@ -17,11 +17,17 @@ import java.time.Instant;
  */
 
 /**
- *
- * @author M315T3R
+ * InsertAVL is a program made specifically for input speed testing.
+ * @author DanielVorster
  */
 public class InsertAVL
 {
+    /**
+     * 
+     * @param args This applications accepts a single argument in the form of a numeric String. It dictates the repetitions.
+     * @throws FileNotFoundException
+     * @throws IOException 
+     */
     public static void main(String[] args) throws FileNotFoundException, IOException
     {
         Instant start = Instant.now();
@@ -39,9 +45,7 @@ public class InsertAVL
             
         
       
-        
-        BufferedReader td = new BufferedReader(new FileReader ("testdata"));
-        BufferedReader qd = new BufferedReader(new FileReader ("querydata"));
+        BufferedReader td = new BufferedReader(new FileReader ("querydata"));
         
         //Populate testData list with testdata file.
         

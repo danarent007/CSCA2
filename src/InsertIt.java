@@ -13,11 +13,17 @@ import java.time.Instant;
 
 
 /**
- * SearchIt searches for entries in a data file using a query file. It makes use of a Binary Search Tree.
+ * InsertIt Inserts all entries from a query file and returns the time taken for insertion. Uses the querydata file.
  * @author DanielVorster
  */
 public class InsertIt {
     static Tree<Entry> tree = new Tree<Entry>();
+    /**
+     * 
+     * @param args This applications accepts a single argument in the form of a numeric String. IT dictates the repetitions.
+     * @throws FileNotFoundException
+     * @throws IOException 
+     */
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         Instant start = Instant.now();
@@ -34,8 +40,7 @@ public class InsertIt {
         {
             
         
-        BufferedReader td = new BufferedReader(new FileReader ("testdata"));
-        BufferedReader qd = new BufferedReader(new FileReader ("querydata"));
+        BufferedReader td = new BufferedReader(new FileReader ("querydata"));
         
         //Populate testData list with testdata file.
         String temp = td.readLine();
