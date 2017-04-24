@@ -26,8 +26,6 @@ public class SearchAVL
     /**
      * 
      * @param args The argument here dictates the number of repetitions.
-     * @throws FileNotFoundException
-     * @throws IOException 
      */
     public static void main(String[] args) throws FileNotFoundException, IOException
     {

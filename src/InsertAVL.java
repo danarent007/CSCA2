@@ -25,8 +25,6 @@ public class InsertAVL
     /**
      * 
      * @param args This applications accepts a single argument in the form of a numeric String. It dictates the repetitions.
-     * @throws FileNotFoundException
-     * @throws IOException 
      */
     public static void main(String[] args) throws FileNotFoundException, IOException
     {

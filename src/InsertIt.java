@@ -21,8 +21,6 @@ public class InsertIt {
     /**
      * 
      * @param args This applications accepts a single argument in the form of a numeric String. IT dictates the repetitions.
-     * @throws FileNotFoundException
-     * @throws IOException 
      */
     
     public static void main(String[] args) throws FileNotFoundException, IOException {

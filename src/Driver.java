@@ -18,8 +18,6 @@ public class Driver
     
     /**
      * Driver class provides a simple interface for running the 3 programs. Programs are run with a parameter, dictating the number of repetitions.
-     * @param args
-     * @throws IOException 
      */
     public static void main(String[] args) throws IOException
     {
